@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --primary: #111727;
+    --primary_dark: #00001a;
     --secondary: #202938;
-    --border : #303946;
+    --border: #303946;
+    --chips: #333949;
 }
 
 body{
@@ -10,32 +12,62 @@ body{
     color: #c7c9ca;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    padding: 0 16px;
+    width: 100vw;
+}
+.showData{
+    width: 100%;
 }
 /*  Table  */
-table { 
+table {
     border-collapse: collapse;
     background-color: var(--primary);
-    border: 1.2px solid var(--border); 
     border-radius: 19px;
+    margin: auto auto;
 }
 th, td{
     border-collapse: collapse;
     text-align: left;
     white-space: nowrap;
-    border-top: 1.2px solid var(--border); 
     border-bottom: 1.2px solid var(--border); 
+}
+td:first-child{
+    border-left: 1.2px solid var(--border);
+}
+td:last-child{
+    border-right: 1.2px solid var(--border);
 }
 th{
     padding: 20px 16px;
+    border-top: 1.2px solid var(--border); 
     letter-spacing: 0.1px;
 }
+th:first-child{
+    border-left: 1.2px solid var(--border);
+}
+td:last-child{
+    border-right: 1.2px solid var(--border);
+}
+
+/* Chips */
+/*td:nth-child(2) .chips_container{
+    
+}*/
+td:nth-child(2) .chips_container .chip{
+    background-color: var(--chips);
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 6px;
+    margin-right: 6px;
+}
+
 .table_header{
     background-color: var(--secondary);
-    font-size: 12px;
+    font-size: 10px;
     text-transform: uppercase;
     color: #6B7581;
     font-weight: 600;
-    border: none;
+    border-bottom: 1.2px solid var(--border); 
 }
 td{
     padding: 16px 16px;
@@ -48,3 +80,10 @@ tr{
 tr:hover{
     background-color: var(--secondary);
 }
+
+
+@media screen and (max-width: 600px) {
+    table { 
+        width: 100%;
+    }
+  }

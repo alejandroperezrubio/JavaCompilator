@@ -1,5 +1,4 @@
-// EXTRACT VALUE FOR HTML HEADER. 
-// ('Book ID', 'Book Name', 'Category' and 'Price')
+// Extract headers
 var col = [];
 for (var i = 0; i < tokenTable.length; i++) {
     for (var key in tokenTable[i]) {
@@ -9,11 +8,10 @@ for (var i = 0; i < tokenTable.length; i++) {
     }
 }
 
-// CREATE DYNAMIC TABLE.
+// Table element
 var table = document.createElement("table");
 
-// CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-
+// Table headers
 var tr = table.insertRow(-1);                   // TABLE ROW.
 
 for (var i = 0; i < col.length; i++) {
@@ -23,14 +21,27 @@ for (var i = 0; i < col.length; i++) {
     tr.appendChild(th);
 }
 
-// ADD JSON DATA TO THE TABLE AS ROWS.
+// Add data as rows
 for (var i = 0; i < tokenTable.length; i++) {
 
     tr = table.insertRow(-1);
 
     for (var j = 0; j < col.length; j++) {
         var tabCell = tr.insertCell(-1);
-        tabCell.innerHTML = tokenTable[i][col[j]];
+        var p = document.createElement("span");
+        p.className = "chips_container";
+        if(j===1){
+            for(var n = 0; n < tokenTable[i][col[1]].length; n++){
+                var chip = document.createElement("span");
+                chip.className = "chip";
+                chip.innerHTML = tokenTable[i][col[1]][n];//tokenTable[i][col[j]]
+                p.appendChild(chip);
+            }
+            tabCell.appendChild(p);
+        }else{
+            p.innerHTML = tokenTable[i][col[j]];
+            tabCell.appendChild(p);
+        }
     }
 }
 
