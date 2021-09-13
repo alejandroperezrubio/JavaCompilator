@@ -1,2 +1,2 @@
-# compilator_js_to_java
+# Java compilator
 Javascript Compilator written in Java
