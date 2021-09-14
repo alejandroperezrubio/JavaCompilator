@@ -34,7 +34,7 @@ for (var i = 0; i < tokenTable.length; i++) {
             for(var n = 0; n < tokenTable[i][col[1]].length; n++){
                 var chip = document.createElement("span");
                 chip.className = "chip";
-                chip.innerHTML = tokenTable[i][col[1]][n];//tokenTable[i][col[j]]
+                chip.innerHTML = tokenTable[i][col[1]][n];
                 p.appendChild(chip);
             }
             tabCell.appendChild(p);

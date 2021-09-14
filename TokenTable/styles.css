@@ -33,6 +33,9 @@ th, td{
 }
 td:first-child{
     border-left: 1.2px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
 }
 td:last-child{
     border-right: 1.2px solid var(--border);
@@ -80,7 +83,12 @@ tr{
 tr:hover{
     background-color: var(--secondary);
 }
-
+.material-icons{
+    font-size: 18px;
+    margin-right: 6px;
+    height: 100%;
+    vertical-align: middle;
+}
 
 @media screen and (max-width: 600px) {
     table { 
