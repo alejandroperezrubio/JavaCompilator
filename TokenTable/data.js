@@ -34,7 +34,7 @@ var tokenTable = [
     {
         "Token": tokenCategories[1],
         "Lexeme": ["sheep", "city", "AuthorName", "number_of_pages"],
-        "Pattern": "[a-zA-Z_$][a-zA-Z\\d_$]*"
+        "Pattern": "[a-zA-Z_$][a-zA-Zd\\_\\$]*"
     },
     {
         "Token": tokenCategories[2],
