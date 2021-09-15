@@ -4,7 +4,7 @@ var tokenTable = [
     {
         "Token": tokenCategories[0],
         "Lexeme": ['"Pris Stratton"', '"Stockholm"', '"hello world"'],
-        "Pattern": '"[a-zA-Zd]*"'
+        "Pattern": '"[a-zA-Zd$&+,:;=?@#|<>.-^*()%!]*"'
     },
     {
         "Token": tokenCategories[0],
