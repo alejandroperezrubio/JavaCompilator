@@ -4,12 +4,12 @@ var tokenTable = [
     {
         "Token": tokenCategories[0],
         "Lexeme": ['"Pris Stratton"', '"Stockholm"', '"hello world"'],
-        "Pattern": '"[a-zA-Zd]'
+        "Pattern": '"[a-zA-Zd]*"'
     },
     {
         "Token": tokenCategories[0],
         "Lexeme": [5, 16, 2021],
-        "Pattern": '"[a-zA-Zd]'
+        "Pattern": 'd*.d*'
     },
     {
         "Token": tokenCategories[0],
@@ -34,7 +34,7 @@ var tokenTable = [
     {
         "Token": tokenCategories[1],
         "Lexeme": ["sheep", "city", "AuthorName", "number_of_pages"],
-        "Pattern": "^([a-zA-Z_$][a-zA-Z\\d_$]*)$"
+        "Pattern": "[a-zA-Z_$][a-zA-Z\\d_$]*"
     },
     {
         "Token": tokenCategories[2],
